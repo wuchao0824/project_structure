@@ -1,4 +1,4 @@
-package com.wuchao.project_structure;
+package com.wuchao.mvp;
 
 import org.junit.Test;
 

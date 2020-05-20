@@ -1,4 +1,4 @@
-package com.wuchao.project_structure;
+package com.wuchao.mvp;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.wuchao.project_structure", appContext.getPackageName());
+        assertEquals("com.wuchao.mvp.test", appContext.getPackageName());
     }
 }

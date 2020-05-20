@@ -1,4 +1,4 @@
-package com.wuchao.project_structure.mvp;
+package com.wuchao.mvp;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;

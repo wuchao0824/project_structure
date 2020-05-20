@@ -1,4 +1,4 @@
-package com.wuchao.project_structure.mvp;
+package com.wuchao.mvp;
 
 import android.util.SparseArray;
 import android.view.View;
