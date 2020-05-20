@@ -10,24 +10,24 @@ import android.content.Context;
 public class MvpPresenter <V extends MvpView> {
     private Context mContext;
     private V mView;
-    protected void attach(V baseView){
+    public void attach(V baseView){
         this.mView=baseView;
         this.mContext=baseView.getContext();
     }
-    protected void detach(){
+    public void detach(){
         this.mContext=null;
         this.mView=null;
     }
     /**
      *  des: 显示加载框
      */
-    protected void showLoading(){
+    public void showLoading(){
         if(mView!=null){
             mView.showLoading();
         }
     }
 
-    protected void hideLoading(){
+    public void hideLoading(){
         if(mView==null){
             mView.hideLoading();
         }
