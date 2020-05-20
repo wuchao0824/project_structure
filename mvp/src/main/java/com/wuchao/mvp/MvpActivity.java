@@ -15,6 +15,9 @@ public abstract class MvpActivity <P extends MvpPresenter> extends CacheActivity
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initWindow();
+        if(getLayoutId()>0){
+            setContentView(getLayoutId());
+        }
         mPresenter=initPresenter();
         if(mPresenter!=null){
             mPresenter.attach(this);
@@ -23,6 +26,7 @@ public abstract class MvpActivity <P extends MvpPresenter> extends CacheActivity
     }
 
     protected void initWindow(){};
+    protected abstract int getLayoutId();
     public abstract P initPresenter();
     protected void initialize(){
         initView();
