@@ -1,3 +1,4 @@
 rootProject.name='project_structure'
 include ':app'
 include ':mvp'
+include ':mvvm'
