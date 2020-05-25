@@ -13,7 +13,7 @@ import java.util.List;
  * Author:wuchao
  * Date:2020/5/22 15:38
  */
-public abstract class LazyFragment extends CacheFragment {
+public abstract class MvpLazyFragment extends CacheFragment {
 
     private boolean mIsFirstVisible = true;
     private boolean mUserVisible = false;
@@ -99,8 +99,8 @@ public abstract class LazyFragment extends CacheFragment {
         if (fragment == null) {
             return true;
         }
-        if (fragment instanceof LazyFragment) {
-            LazyFragment lazyFragment = (LazyFragment) fragment;
+        if (fragment instanceof MvpLazyFragment) {
+            MvpLazyFragment lazyFragment = (MvpLazyFragment) fragment;
             return lazyFragment.isSupportUserVisible();
         }
         return fragment.isVisible();
@@ -115,8 +115,8 @@ public abstract class LazyFragment extends CacheFragment {
         List<Fragment> fragments = childFragmentManager.getFragments();
         if (!fragments.isEmpty()) {
             for (Fragment child : fragments) {
-                if (child instanceof LazyFragment && !child.isHidden() && child.getUserVisibleHint()) {
-                    ((LazyFragment) child).dispatchUserVisibleHint(visible);
+                if (child instanceof MvpLazyFragment && !child.isHidden() && child.getUserVisibleHint()) {
+                    ((MvpLazyFragment) child).dispatchUserVisibleHint(visible);
                 }
             }
         }

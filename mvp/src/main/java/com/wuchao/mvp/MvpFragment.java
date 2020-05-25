@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
  * Author:wuchao
  * Date:2020/5/22 16:21
  */
-public abstract class MvpFragment<T extends MvpPresenter> extends LazyFragment implements MvpView{
+public abstract class MvpFragment<T extends MvpPresenter> extends MvpLazyFragment implements MvpView{
 
     protected T tPresenter;
 
